@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>सुकून - Box Breathing Animation</title>
+    <style>
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Center the body */
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f2ede4; /* Light beige background */
+            color: #4a4a4a;
+        }
+
+        /* Sukoon branding */
+        .app-name {
+            font-size: 2.5em;
+            color: #4a4a4a;
+            font-weight: bold;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        /* Navigation styling */
+        nav {
+            display: flex;
+            justify-content: center;
+            font-size: 1.1em;
+            color: #4a4a4a;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: inherit;
+            padding: 10px 15px;
+            margin: 0 5px;
+            font-weight: 500;
+            position: relative;
+        }
+
+        nav a.active {
+            color: #588da8;
+            font-weight: bold;
+        }
+
+        nav a.active::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background: #588da8;
+            bottom: -5px;
+            left: 0;
+            border-radius: 2px;
+        }
+
+        /* Centered container for the animation */
+        .animation-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-grow: 1;
+        }
+
+        .animation-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #ffffff;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .container {
+            width: 300px;
+            height: 300px;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        /* Words styling */
+        .word {
+            position: absolute;
+            font-size: 24px;
+            font-weight: bold;
+            color: #4a4a4a;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+
+        /* Gradient animated border using SVG */
+        .container::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 5px solid transparent;
+            box-sizing: border-box;
+            border-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='100' height='100' viewBox='0 0 100 100' fill='none' xmlns='http://www.w3.org/2000/svg'%3E %3Cstyle%3Epath%7Banimation:stroke 16s infinite linear 2s%3B%7D%40keyframes stroke%7Bto%7Bstroke-dashoffset:0%3B%7D%7D%3C/style%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='0%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%232d3561' /%3E%3Cstop offset='25%25' stop-color='%23c05c7e' /%3E%3Cstop offset='50%25' stop-color='%23f3826f' /%3E%3Cstop offset='100%25' stop-color='%23ffb961' /%3E%3C/linearGradient%3E %3Cpath d='M1.5 1.5 l97 0l0 97l-97 0 l0 -97' stroke-linecap='square' stroke='url(%23g)' stroke-width='3' stroke-dasharray='388' stroke-dashoffset='388'/%3E %3C/svg%3E") 1;
+            animation: borderAnimation 16s infinite linear;
+            animation-delay: 2s;
+        }
+
+        /* Word Animations */
+        .word-1 {
+            animation: fadeInOut 16s infinite;
+            animation-delay: 2s;
+        }
+
+        .word-2 {
+            animation: fadeInOut 16s infinite;
+            animation-delay: 6s;
+        }
+
+        .word-3 {
+            animation: fadeInOut 16s infinite;
+            animation-delay: 10s;
+        }
+
+        .word-4 {
+            animation: fadeInOut 16s infinite;
+            animation-delay: 14s;
+        }
+
+        /* Fade in and out animation for words */
+        @keyframes fadeInOut {
+            0%, 20%, 100% {
+                opacity: 0;
+            }
+            10%, 15% {
+                opacity: 1;
+            }
+        }
+
+        /* Border animation to simulate SVG's stroke motion */
+        @keyframes borderAnimation {
+            0% {
+                stroke-dashoffset: 388;
+            }
+            100% {
+                stroke-dashoffset: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Sukoon title -->
+    <div class="app-name">सुकून</div>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="home.php" class="active">Home</a>
+        <a href="journal.php">Journal</a>
+        <a href="therapy.php">Therapy</a>
+        <a href="progress.php">Progress</a>
+        <a href="profile.php">Profile</a>
+    </nav>
+
+    <!-- Centered container for animation -->
+    <div class="animation-wrapper">
+        <div class="animation-container">
+            <div class="container">
+                <div class="word word-1">IN</div>
+                <div class="word word-2">HOLD</div>
+                <div class="word word-3">EXHALE</div>
+                <div class="word word-4">HOLD</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
