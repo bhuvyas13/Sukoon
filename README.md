@@ -35,7 +35,7 @@ The manifestation board is a digital space where users can visualize and set per
   ![Manifestation Board Empty](screenshots/manifestation_board_empty.png)  
 
 - **Filled State**: A populated manifestation board showing user goals.  
-  ![Manifestation Board Filled](screenshots/manifestation_board.png)  
+  ![Manifestation Board Filled](screenshots/mainefestation_board.png)  
 
 ---
 
@@ -114,16 +114,6 @@ Ensure you have the following installed:
    ```bash  
    git clone https://github.com/bhuvyas13/Sukoon.git  
    cd Sukoon  
-   ```  
-
-2. Install dependencies:  
-   ```bash  
-   flutter pub get  
-   ```  
-
-3. Run the application:  
-   ```bash  
-   flutter run  
    ```  
 
 ---
