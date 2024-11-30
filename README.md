@@ -120,9 +120,8 @@ Ensure you have the following installed:
 
 ## 💻 Technology Stack  
 
-- **Frontend & Backend**: Flutter  
-- **State Management**: Provider  
-- **Database**: Firebase  
+- **Frontend & Backend**: HTML, CSS, JS
+- **Database**: MYSQL
 
 ---
 
