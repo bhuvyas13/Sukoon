@@ -1,6 +1,6 @@
-# Sukoon
+# सुकून
 
-Welcome to **Sukoon**, a mental health and wellness application aimed at promoting mindfulness, relaxation, and mental well-being. This repository contains the source code and documentation for the Sukoon application.
+Welcome to **सुकून**, a mental health and wellness application aimed at promoting mindfulness, relaxation, and mental well-being. This repository contains the source code and documentation for the Sukoon application.
 
 ---
 
